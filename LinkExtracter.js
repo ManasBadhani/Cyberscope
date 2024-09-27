@@ -1,7 +1,7 @@
 import { Builder, By, until } from 'selenium-webdriver';
 import chrome from 'selenium-webdriver/chrome.js';
 
-// Function to perform the web scraping
+// Function to perform the Link Extraction
 async function scrapeLinks(query) {
     let driver = await new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options()).build();
     
