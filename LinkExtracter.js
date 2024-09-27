@@ -10,10 +10,10 @@ async function scrapeLinks(query) {
         let searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
         await driver.get(searchUrl);
 
-        // Wait for the search results to load
+        
         await driver.wait(until.elementLocated(By.css('div#search')), 10000);
 
-        // Extract all the result links
+        
         let links = await driver.findElements(By.css('div#search a'));
         let urls = [];
         
@@ -22,11 +22,11 @@ async function scrapeLinks(query) {
             urls.push(url);
         }
 
-        // Output the extracted URLs
+        // Output the extracted Links
         console.log(`Links for the query "${query}":`);
         urls.forEach(url => console.log(url));
 
-        // Scrape data from each extracted link
+        // Function call to extract data from links
         for (let url of urls) {
             await scrapeDataFromLink(driver, url);
         }
@@ -34,7 +34,7 @@ async function scrapeLinks(query) {
     } catch (error) {
         console.error('Error occurred:', error);
     } finally {
-        // Close the browser
+        
         await driver.quit();
     }
 }
@@ -42,26 +42,25 @@ async function scrapeLinks(query) {
 // Function to scrape data from each link
 async function scrapeDataFromLink(driver, url) {
     try {
-        // Navigate to the URL
+        
         await driver.get(url);
         
-        // Wait for the page to load (you can adjust the selector as needed)
         await driver.wait(until.elementLocated(By.css('body')), 10000);
         
-        // Example: Extract the title and some specific data
+       
         let title = await driver.getTitle();
-        let content = await driver.findElement(By.css('body')).getText(); // Extract all text for demonstration
+        let content = await driver.findElement(By.css('body')).getText(); 
 
-        // Output the extracted data
+       
         console.log(`Data from ${url}:`);
         console.log(`Title: ${title}`);
-        console.log(`Content Preview: ${content.substring(0, 100)}...`); // Print first 200 characters
+        console.log(`Content Preview: ${content.substring(0, 100)}...`); \
 
     } catch (error) {
         console.error(`Error scraping data from ${url}:`, error);
     }
 }
 
-// Execute the function with a specific search query
-let query = 'cyber threats incidents site:nciipc.gov.in OR site:gov.in'; // Modify as needed
+// Function for runing query for specific results
+let query = 'cyber threats incidents site:nciipc.gov.in OR site:gov.in'; 
 scrapeLinks(query);
