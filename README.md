@@ -25,10 +25,8 @@ In an era where cyber threats are becoming more sophisticated, it is crucial to 
 
 - **Frontend**: ReactJS, HTML, CSS, JavaScript
 - **Backend**: NodeJS, ExpressJS
-- **Web Scraping**: Python (Selenium, Scrapy, BeautifulSoup)
-- **Database**: MySQL/PostgreSQL
-- **Machine Learning**: Python (TensorFlow, Scikit-learn)
-- **Data Processing**: Pandas, NumPy
+- **Web Scraping**: JavaScript (Selenium)
+- **Database**: PostgreSQL
 
 ## Installation
 
@@ -51,7 +49,7 @@ In an era where cyber threats are becoming more sophisticated, it is crucial to 
    ```
 
 4. Set up the database:
-   - Create a MySQL/PostgreSQL database.
+   - Create a PostgreSQL database.
    - Run the migration scripts to set up the schema.
 
 5. Start the backend and frontend servers:
@@ -68,13 +66,6 @@ In an era where cyber threats are becoming more sophisticated, it is crucial to 
 - Use the interactive dashboard to explore real-time cyber incident data.
 - Filter incidents by type, source, and date to generate specific reports.
   
-## Contributors
-
-- **Vaidehi Chavan** 
-- **Arnav Dekate** 
-- **Paras Sawalkar**
-- **Manas Badhani** 
-
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
