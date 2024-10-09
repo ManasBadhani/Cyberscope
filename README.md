@@ -10,8 +10,6 @@ In an era where cyber threats are becoming more sophisticated, it is crucial to 
 
 - **Automated Data Aggregation**: Collect cybersecurity data from diverse sources, such as threat intelligence feeds, public reports, and social media, in real-time.
 - **Real-time Analytics and Visualization**: Present the aggregated data using interactive dashboards and visualizations for quick insights and decision-making.
-- **Scalability**: Ensure that the platform can accommodate future data sources and evolving threats.
-- **Compliance**: Adhere to cybersecurity regulations to protect sensitive information.
 
 ## Features
 
